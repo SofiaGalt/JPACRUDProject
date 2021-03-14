@@ -1,6 +1,8 @@
 package com.skilldistillery.learningapp.entities;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -13,8 +15,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class TestResource {
-	
+public class TestResourceInvalid {
+
 	private static EntityManagerFactory emf;
 	
 	private EntityManager em;
@@ -35,7 +37,7 @@ class TestResource {
 	@BeforeEach
 	void setUp() throws Exception {
 		em = emf.createEntityManager();
-		resource = em.find(Resource.class, 1);
+		resource = em.find(Resource.class, 100);
 	}
 
 	@AfterEach
@@ -45,19 +47,9 @@ class TestResource {
 	}
 
 	@Test
-	@DisplayName("Test resource not null.")
-	void testNotNull() {
-		assertNotNull(resource);
+	@DisplayName("Test resource null.")
+	void testNull() {
+		assertNull(resource);
 	}
 	
-	@Test
-	@DisplayName("Test for correct resource state data mapping.")
-	void testFieldMapping() {
-		
-		assertEquals(1, resource.getId());
-		assertEquals("Khan Academy", resource.getName());
-		assertEquals("https://www.khanacademy.org/", resource.getUrl());
-		assertEquals("Math  Science  Computing  JavaScript HTML CSS Computer Science  Arts  Humanities", resource.getSubject());
-	}
-
 }
