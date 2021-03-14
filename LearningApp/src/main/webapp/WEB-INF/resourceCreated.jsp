@@ -8,7 +8,7 @@
 </head>
 <body>
 
-Your new resource has been successfully created -
+${message}
 	<td><a href="${resource.url}">${resource.name}</a></td>
 	
 	<!-- return to home page -->

@@ -52,5 +52,15 @@ public class ResourceDAOImpl implements ResourceDAO {
 		
 		return persistedResource;
 	}
+
+	@Override
+	public Resource deleteResource(Integer id) {
+		
+		Resource toDelete = em.find(Resource.class, id);
+		
+		em.remove(toDelete);
+		
+		return toDelete;
+	}
 	
 }

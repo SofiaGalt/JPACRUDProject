@@ -54,6 +54,7 @@ public class ResourceController {
 		  r = resourceDao.createResource(r);
 		  
 		  mv.addObject("resource", r);
+		  mv.addObject("message", "Your new resource has been successfully created -");
 		  
 		  mv.setViewName("resourceCreated"); // (ViewResolver in use)
 		  return mv; 
@@ -77,12 +78,22 @@ public class ResourceController {
 		  
 		  
 		  mv.addObject("resource", resourceDao.updateResource(r));
-		  
-		  
-		  //i'm working here
+		  mv.addObject("message", "Your resource has been successfully updated -");
 		  
 		  mv.setViewName("resourceCreated"); // (ViewResolver in use)
 		  return mv; 
 	}
 		
+	@RequestMapping(path={"remove.do"}, method = RequestMethod.GET)
+	public ModelAndView deleteResource(Integer id) {
+		
+		  ModelAndView mv = new ModelAndView();
+		  
+		  mv.addObject("resource", resourceDao.deleteResource(id));
+		  mv.addObject("message", "Your resource has been successfully deleted -");
+		  
+		  
+		  mv.setViewName("resourceCreated"); // (ViewResolver in use)
+		  return mv; 
+	}
 }

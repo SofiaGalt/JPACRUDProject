@@ -27,6 +27,10 @@
 							<input type="text" hidden="true" name="id" value="${resource.id}">
 							<input type="submit" value="update"></form>
 					</td>
+					<td><form action="remove.do" method="get">
+							<input type="text" hidden="true" name="id" value="${resource.id}">
+							<input type="submit" value="remove"></form>
+					</td>
 				</tr>
 			</c:forEach>
 		</tbody>

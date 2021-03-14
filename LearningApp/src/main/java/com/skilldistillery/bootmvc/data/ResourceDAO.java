@@ -12,4 +12,5 @@ public interface ResourceDAO {
 	List<Resource> findResourcesBySubject(String subject);
 	Resource createResource(Resource r);
 	Resource updateResource(Resource r);
+	Resource deleteResource(Integer id);
 }
