@@ -11,4 +11,5 @@ public interface ResourceDAO {
 	List<Resource> getAllResources();
 	List<Resource> findResourcesBySubject(String subject);
 	Resource createResource(Resource r);
+	Resource updateResource(Resource r);
 }

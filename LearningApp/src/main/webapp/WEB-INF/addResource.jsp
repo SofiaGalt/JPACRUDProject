@@ -17,6 +17,11 @@
 			<input type="submit" value="Submit">
 		</form>
 	</div>
+	
+	<!-- return to home page -->
+	<form action="/" method="get">
+			<input type="submit" value="Return to Homepage">
+	</form>
 
 </body>
 </html>

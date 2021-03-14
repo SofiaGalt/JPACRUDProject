@@ -47,5 +47,11 @@ public class Resource {
 		this.name = name;
 	}
 	
-	
+	public void setToEqual(Resource r) {
+		
+		this.id = r.id;
+		this.name = r.name;
+		this.subject = r.subject;
+		this.url = r.url;
+	}
 }

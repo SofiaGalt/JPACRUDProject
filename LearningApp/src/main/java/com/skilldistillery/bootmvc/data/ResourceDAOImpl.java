@@ -42,5 +42,15 @@ public class ResourceDAOImpl implements ResourceDAO {
 		em.persist(r);
 		return r;
 	}
+
+	@Override
+	public Resource updateResource(Resource r) {
+		
+		Resource persistedResource = em.find(Resource.class, r.getId());
+		
+		persistedResource.setToEqual(r);
+		
+		return persistedResource;
+	}
 	
 }

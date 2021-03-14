@@ -58,4 +58,31 @@ public class ResourceController {
 		  mv.setViewName("resourceCreated"); // (ViewResolver in use)
 		  return mv; 
 	}
+	
+	@RequestMapping(path={"update.do"}, method = RequestMethod.GET)
+	public ModelAndView updateResource(Integer id) {
+		
+		  ModelAndView mv = new ModelAndView();
+		  
+		  mv.addObject("resource", resourceDao.findById(id));
+		  
+		  mv.setViewName("updateResource"); // (ViewResolver in use)
+		  return mv; 
+	}
+		
+	@RequestMapping(path={"submitUpdatedResource.do"}, method = RequestMethod.POST)
+	public ModelAndView submitUpdatedResource(Resource r) {
+		
+		  ModelAndView mv = new ModelAndView();
+		  
+		  
+		  mv.addObject("resource", resourceDao.updateResource(r));
+		  
+		  
+		  //i'm working here
+		  
+		  mv.setViewName("resourceCreated"); // (ViewResolver in use)
+		  return mv; 
+	}
+		
 }

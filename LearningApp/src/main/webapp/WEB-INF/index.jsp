@@ -23,6 +23,10 @@
 				<tr>
 					<td><a href="${resource.url}">${resource.name}</a></td>
 					<td>${resource.subject}</td>
+					<td><form action="update.do" method="get">
+							<input type="text" hidden="true" name="id" value="${resource.id}">
+							<input type="submit" value="update"></form>
+					</td>
 				</tr>
 			</c:forEach>
 		</tbody>
