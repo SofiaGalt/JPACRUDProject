@@ -41,7 +41,7 @@ dependencies {
   compile "org.hibernate:hibernate-core:$hibernateVersion"
   compile "org.hibernate:hibernate-c3p0:$hibernateVersion"
   compile group: 'com.fasterxml.jackson.core', name: 'jackson-annotations', version: '2.11.3'
-  runtimeOnly 'mysql:mysql-connector-java'
+ // runtimeOnly 'mysql:mysql-connector-java'
   testImplementation("org.junit.jupiter:junit-jupiter:$junit5Version")
 }
 

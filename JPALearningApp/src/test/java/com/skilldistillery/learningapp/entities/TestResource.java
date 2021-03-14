@@ -45,7 +45,7 @@ class TestResource {
 	}
 
 	@Test
-	@DisplayName("")
+	@DisplayName("Test resource ")
 	void test() {
 		assertNotNull(resource);
 		

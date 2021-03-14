@@ -1,4 +1,4 @@
 rootProject.name = 'LearningApp'
 
 
-includeFlat 'JPALearningApp'
+includeFlat 

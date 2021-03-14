@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS `resource` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(100) NULL,
   `url` VARCHAR(1000) NULL,
-  `image_url` VARCHAR(1000) NULL,
+  `image_url` VARCHAR(10000) NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB;
 

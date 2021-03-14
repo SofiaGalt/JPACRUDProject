@@ -10,6 +10,26 @@ public class Resource {
 	private int id;
 	
 	private String name;
+	
+	private String url;
+	
+	private String subject;
+
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+
+	public String getUrl() {
+		return url;
+	}
+
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
 	public int getId() {
 		return id;
