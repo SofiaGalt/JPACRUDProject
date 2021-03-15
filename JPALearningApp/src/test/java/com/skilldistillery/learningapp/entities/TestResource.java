@@ -55,9 +55,9 @@ class TestResource {
 	void testFieldMapping() {
 		
 		assertEquals(1, resource.getId());
-		assertEquals("Khan Academy", resource.getName());
-		assertEquals("https://www.khanacademy.org/", resource.getUrl());
-		assertEquals("Math  Science  Computing  JavaScript HTML CSS Computer Science  Arts  Humanities", resource.getSubject());
+		assertEquals("Skill Distillery", resource.getName());
+		assertEquals("https://skilldistillery.com/", resource.getUrl());
+		assertEquals("Java JavaScript SQL MYSQLWorkbench  Gradel Maven AngularJS Object-Oriented Programming OOP JSP Servlets Spring Spring MVC HTML CSS  RESTful web", resource.getSubject());
 	}
 
 }
