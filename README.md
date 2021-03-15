@@ -18,7 +18,7 @@ The frontend of the project is composed of JSP files which are hidden within the
 
 This application follows the MVC, and DAO design patterns.
 
-I have enjoyed writing the last few Skill Distillery project applications using the separation of concerns principles - which provide for structured maintainable code.
+I have enjoyed writing the last few Skill Distillery project applications using the separation of concerns principles - which provide for structured, maintainable code.
 
 This app contains a JPA project which works together with a Spring boot project.  The JPA project is responsible for the mapping of the sql table to entity relationship.  The Spring boot project is responsible for the frontend as well as the network routing and DAO functionality.
 
